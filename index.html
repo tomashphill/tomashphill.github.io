@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZML4TQ4T3S"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZML4TQ4T3S');
+    </script> -->
+    <title>Tomás Phillips</title>
+</head>
+<body>
+    <div id="main-menu">
+        <div class="menu-button" onclick="window.location.href='./about-me.html'"><a>TOMÁS (about me)</a></div>
+        <div class="menu-button" onclick="window.location.href='./data/TomásPhillips-Resume.pdf'"><a>RESUME</a></div>
+        <div class="menu-button" onclick="window.location.href='./portfolio.html'"><a>PORTFOLIO</a></div>
+    </div>
+</body>
+<script>
+    fetch("./data/rijks-faces.json")
+        .then(r => r.json())
+        .then(d => {
+            let p = d[Math.floor(Math.random() * d.length)]
+            let height = p.box.bottom - p.box.top
+            let width = p.box.right - p.box.left
+
+            let canvas = document.createElement("canvas")
+
+            let img = new Image
+            img.src = p["url"]
+            img.onload = ((e) => {
+                canvas.height = p.box.bottom - p.box.top
+                canvas.width = p.box.right - p.box.left
+
+                let ctx = canvas.getContext("2d")
+
+                function createShape(ctx, points, img) {
+                    ctx.save()
+                    ctx.beginPath()
+                    points.forEach(([x, y], i) => {
+                        x -= p.box.left
+                        y -= p.box.top
+                        if (i === 0) {
+                            ctx.moveTo(x, y)
+                        } else {
+                            ctx.lineTo(x, y)
+                        }
+                    })
+                    ctx.closePath()
+                    ctx.clip()
+                    ctx.drawImage(img, p.box.left, p.box.top, width, height, 0, 0, width, height)
+                    ctx.restore()
+                }
+
+                createShape(ctx, p["leftEye"], img)
+                createShape(ctx, p["rightEye"], img)
+                createShape(ctx, p["mouth"], img)
+
+                document.body.appendChild(canvas)
+            })
+        })
+</script>
+</html>

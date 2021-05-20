@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="style/nobel.css">
+    <title>About Me</title>
+</head>
+<body>
+    <div id="back" onclick="window.location.href='./index.html'">&#127968</div>
+    <div id="options-container">
+        <div id="laureates-container">
+            <select name="laureates" id="laureates" multiple></select>
+        </div>
+        <div id="verbs-container">
+            <div id="verbs"></div>
+        </div>
+    </div>
+    <div id="grid-container">
+        <div id="grid"></div>
+    </div>
+    <div id="descriptions"></div>
+</body>
+<script src="js/nobel.js"></script>
+</html>

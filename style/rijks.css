@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+
+
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      
+      h1, h3, header, span {
+        font-family: 'Archivo Narrow', sans-serif;
+    }
+      
+      h1 {
+        padding-top: 5px;
+      }
+      
+      svg {
+        z-index: 1;
+      }
+      
+      #gogh {
+        padding-top: 0.4em;
+        right: 30%;
+        left: 46%;
+        width: 40%
+      }
+
+      #van-gogh {
+          margin-bottom: 1em;
+      }
+      
+      p:last-child {
+        padding-bottom: 4em;
+     }
+     
+    hr {
+        margin-bottom: 1em;
+    }
+
+     p {
+        padding-bottom: 1em;
+     }
+      
+      body {
+        background-color: rgb(243, 248, 248);
+        margin: 0 auto;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      
+      #blog {
+        left: 12%;
+        top: 10%;
+        width: 50vw;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 1.2em;
+        position: absolute;
+      }
+      
+      @media screen and (max-width: 600px) {
+        #blog {
+           left: 5%;
+           top: 10%;
+           width: 85%;
+           font-family: 'Archivo Narrow', sans-serif;
+           font-size: 1.2em;
+           position: absolute;
+        }
+     }
+      
+      .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 50%; /* aspect ratio */
+        vertical-align: top;
+      }
+      
+      .svg-container-graph {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 40%; /* aspect ratio */
+        vertical-align: top;
+      }
+      
+      #ratio {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 70%; /* aspect ratio */
+        vertical-align: top;
+      }
+      
+      .ratio-svg {
+        left: 5% !important;
+      }
+      
+      #all-paintings {
+        padding-bottom: 1250%;
+      }
+
+      #van-gogh {
+        margin-bottom: 1em;
+    }
+      
+      .svg-content {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      #back {
+        display: inline-block;
+        font-family: 'Archivo Narrow', sans-serif;
+        position: absolute;
+        left: 1%;
+        border: rgb(238, 238, 233) solid 2px;
+        padding: 0.3em 0.4em;
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+        cursor: pointer;
+     }
+
+     #back:hover {
+        background-color: yellow;
+     }

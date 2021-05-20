@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Rijksmuseum Paintings</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+    <link rel="stylesheet" href="./style/rijks.css">
+  </head>
+
+  <body>
+    <div id="back" onclick="window.location.href='./index.html'">&#127968</div>
+    <div id="blog">
+
+        <p>__AN EXPLORATION OF RIJKSMUSEUM PAINTINGS OVER TIME__</p>
+        <p>This is the first mini-project I completed when I began my career as a data scientist. Having previously graduated with a degree in art, I wanted to explore how data and art could intertwine. Fortunately, the Rijksmuseum in Amsterdam, Netherlands provides an API rich with data detailing the art in its collection. I particulary chose data on the color distribution of rectangular paintings, and ran with that.</p><hr>
+        <p>Take this image of a painting by Van Gogh. If you hover over it with a mouse, it will break up into chunks of pure color, showing the distribution of each color in the painting proportional to the area it covers.</p>
+
+      <div class="svg-container" id="van-gogh">
+        <svg class="svg-content"></svg>
+      </div>
+
+        <p>The color distribution was initially represented as percentages, such as 32% of the hexadecimal color #4E4E3C, 12% of another color, and further on. From there the position and area of neatly packed rectangles were fitted onto the dimensions of the painting, creating the interactive visual above.</p>
+
+        <p>Finally, this process was done for all paintings, and whatever their dimension may have been, they were normalized into squares and assembled into a "tapestry" shown below. The squares are ordered by date, ascending from left-right, top-down. Clicking on any of the squares will take you to the original image.
+        </p>
+
+        <p>You can really get a gestalt of the colors in the paintings in the Rijksmuseum! One thing to glean from this is how much brighter the paintings are towards the end than they are in the beginning/middle. A possible cause of this is simply the inevitable browning of paintings over time that conservationists fight so hard to prevent or reverse. Of course if any information is to analyzed regarding the color composition, I believe that's best left to the chemists, where they can formally and accurately describe color through pigment, rather than an image of a painting.
+        </p>
+
+      <div class="svg-container" id="all-paintings">
+        <svg class="svg-content"></svg>
+      </div>
+
+    </div>
+
+  </body>
+
+  <script src="./js/rijks.js"></script>
+</html>

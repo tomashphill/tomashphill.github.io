@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   max-width: 1400px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: rgb(243, 248, 248);
+}
+
+#grid-container {
+   position: absolute;
+   height: 100%;
+   width: 30%;
+   left: 30%;
+   top: 0%;
+}
+
+#grid {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.row {
+   text-align: center;
+}
+
+.cell {
+   height: 20px;
+   width: 20px;
+   margin: 5px;
+   display: inline-block;
+   background-color: white;
+   border: rgb(161, 161, 161) solid 1px;
+   border-radius: 5%;
+}
+
+.cell:hover {
+   cursor: pointer;
+}
+
+#options-container {
+   position: absolute;
+   padding: 1em;
+   width: 30%;
+   top: 50%;
+   transform: translate(0, -50%);
+   border-radius: 0;
+}
+
+#verbs-container {
+   padding: 0em 1em 1em 1em;
+}
+
+#verbs {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+#verbs > button {
+   display: block;
+   flex: 0 0 33.333333%;
+   outline: none;
+   border: none;
+   background: none;
+   margin: 0.3em 0;
+   text-align: left;
+   white-space: nowrap;
+}
+
+#laureates-container {
+   width: 100%;
+   padding: 2em 1em;
+}
+
+#laureates {
+   display: none;
+   height: 100%;
+   width: 100%;
+}
+
+#descriptions {
+   position: absolute;
+   left: 60%;
+   width: 40%;
+   height: 100%;
+   border-left: black solid 1px;
+   border-right: black solid 1px;
+   overflow: auto;
+   font-family: 'Archivo Narrow', sans-serif;
+   margin-left: 1em;
+}
+
+::-webkit-scrollbar {
+   display: none;
+}
+
+.description-unit{
+   padding: 1em;
+}
+
+h1 {
+   padding: 1rem;
+   background-color: rgb(61, 61, 61);
+   color: white;
+}
+
+hr {
+   height: 1px;
+}
+
+#back {
+   display: inline-block;
+   font-family: 'Archivo Narrow', sans-serif;
+   position: absolute;
+   left: 1%;
+   border: rgb(238, 238, 233) solid 2px;
+   padding: 0.3em 0.4em;
+   -webkit-user-select: none; /* Safari */        
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* IE10+/Edge */
+   user-select: none; /* Standard */
+   cursor: pointer;
+}
+
+.checked {
+   color: rgb(0, 194, 0);
+}
+
+#back:hover {
+   background-color: yellow;
+}
+
+[class^='select2'] {
+   border-radius: 0px !important;
+ }
